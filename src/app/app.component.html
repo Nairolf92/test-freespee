@@ -1,0 +1,42 @@
+<div class="container">
+  <h2>Dialer</h2>
+  <div class="btn-group">
+    <label class="btn btn-primary" (click)="addToOutput(1)" role="button">1</label>
+    <label class="btn btn-primary" (click)="addToOutput(2)" role="button">2</label>
+    <label class="btn btn-primary" (click)="addToOutput(3)" role="button">3</label>
+  </div>
+  <br>
+  <div class="btn-group">
+    <label class="btn btn-primary" (click)="addToOutput(4)" role="button">4</label>
+    <label class="btn btn-primary" (click)="addToOutput(5)" role="button">5</label>
+    <label class="btn btn-primary" (click)="addToOutput(6)" role="button">6</label>
+  </div>
+  <br>
+  <div class="btn-group">
+    <label class="btn btn-primary" (click)="addToOutput(7)" role="button">7</label>
+    <label class="btn btn-primary" (click)="addToOutput(8)" role="button">8</label>
+    <label class="btn btn-primary" (click)="addToOutput(9)" role="button">9</label>
+  </div>
+  <br>
+  <div class="btn-group">
+    <label class="btn btn-primary" (click)="addToOutput('*')" role="button">*</label>
+    <label class="btn btn-primary" (click)="addToOutput(0)" role="button">0</label>
+    <label class="btn btn-primary" (click)="addToOutput('#')" role="button">#</label>
+  </div>
+  <br><br>
+  <button type="button" class="btn btn-secondary" (click)="calculate()">
+  Calculate
+  </button>
+  <div class="btn-group" *ngIf="displayCalc && !hasCalcError">
+    <input disabled  type="text" class="form-control"
+     placeholder="Output" value={{outPutCalc}}>
+  </div>
+  <div class="btn-group" *ngIf="hasCalcError">
+    A calculation problem occurred
+  </div>
+  <br><br>
+  <div class="btn-group">
+    <input disabled  type="text" class="form-control"
+     placeholder="Output" value={{outPutValue}}>
+  </div>
+</div>
